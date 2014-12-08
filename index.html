@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2nd assignment</title>
+	<script>
+		person = {
+			  		name: 'Mario',
+			  		distance_travelled: 0, 
+			 		say_name: function(){
+			 			alert(this.name);
+			 		},
+			 		say_something: function(phrase){
+			 			alert('"' + this.name + ' says ' + phrase + '"');
+			 		},
+			 		walk: function(){
+			 			alert('"' + this.name + ' is walking.' + '"');
+			 			this.distance_travelled = this.distance_travelled + 3;
+			 		},
+			 		run: function(){
+			 			alert('"' + this.name + ' is running.' + '"');
+			 			this.distance_travelled = this.distance_travelled + 10;
+			 		},
+			 		crawl: function(){
+			 			alert('"' + this.name + ' is crawling.' + '"');
+			 			this.distance_travelled = this.distance_travelled + 1;
+			 		},
+			 		do_something: function(){
+			 			var action = Math.floor((Math.random() * 3) + 1);
+					    switch (action) {
+					        case 1:
+					         	this.run();
+					            break;
+					        case 2:
+					          	this.walk();
+					            break;
+					        case 3:
+					            this.crawl();
+					            break;					        
+					   		}
+					},
+					fly: function(function1, function2){
+						var chance = Math.floor((Math.random() * 70) + 1);
+
+						if(chance <= 30)
+						{
+							alert('Is flying!!! and ');
+							function1();
+						}
+						else if(chance <= 70)
+						{	
+							alert('Failed to fly ');
+							function2();
+						}
+					}					    
+				};
+
+		var flying = function(){
+			 			alert('sight seeing beside the clouds.');
+			 		};
+		var flying_failed = function(){
+			 			alert('and just watching the birds fly.');
+			 		};
+
+		console.log(person);
+		// console.log(person.fly(elevate,jump));
+	</script>
+</head>
+<body>
+	<h1>This is the 2nd assignment on Fundamentals in Javascript</h1>
+</body>
+</html>
